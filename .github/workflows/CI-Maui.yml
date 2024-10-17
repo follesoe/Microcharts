@@ -1,0 +1,44 @@
+name: Publish MAUI NuGet package to GitHub
+
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  Maui-nuget-Builds:
+    
+    runs-on: window-latest
+
+    steps:
+
+    - name: Clone source
+      uses: actions/checkout@v4.0.0
+      with:
+        fetch-depth: 0
+
+    - name: Install .NET SDK
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+        source-url: https://nuget.pkg.github.com/follesoe/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+    - name: Install .NET MAUI Workloads
+      run: |
+        dotnet workload install android
+        dotnet workload install ios
+        dotnet workload install maccatalyst
+        dotnet workload install maui
+        dotnet workload list
+
+    - name: Build Microcharts.Maui
+      run: dotnet build --configuration=Release Sources\Microcharts.Maui\Microcharts.Maui.csproj
+
+    - name: Pack Microcharts.Maui
+      run: dotnet pack --configuration=Release -o artifacts Sources\Microcharts.Maui\Microcharts.Maui.csproj
+
+    - name: Push generated package to GitHub registry
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      run: dotnet nuget push ./artifacts/*.nupkg --skip-duplicate --no-symbols --api-key $NUGET_AUTH_TOKEN
