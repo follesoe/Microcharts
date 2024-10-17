@@ -28,7 +28,6 @@ jobs:
       run: |
         dotnet workload install android
         dotnet workload install ios
-        dotnet workload install maccatalyst
         dotnet workload install maui
         dotnet workload list
 
@@ -39,6 +38,6 @@ jobs:
       run: dotnet pack --configuration=Release -o artifacts Sources\Microcharts.Maui\Microcharts.Maui.csproj
 
     - name: Push generated package to GitHub registry
-      env:
-        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      run: dotnet nuget push ./artifacts/*.nupkg --skip-duplicate --no-symbols --api-key $NUGET_AUTH_TOKEN
+      run: |
+        dotnet nuget add source --username follesoe --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/follesoe/index.json"
+        dotnet nuget push ./artifacts/*.nupkg --skip-duplicate --no-symbols  --source "github"
