@@ -7,7 +7,7 @@ on:
 jobs:
   Maui-nuget-Builds:
     
-    runs-on: window-latest
+    runs-on: windows-latest
 
     steps:
 
