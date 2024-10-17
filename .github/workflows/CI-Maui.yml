@@ -35,9 +35,9 @@ jobs:
       run: dotnet build --configuration=Release Sources\Microcharts.Maui\Microcharts.Maui.csproj
 
     - name: Pack Microcharts.Maui
-      run: dotnet pack --configuration=Release -o artifacts Sources\Microcharts.Maui\Microcharts.Maui.csproj
+      run: dotnet pack --configuration=Release --version-suffix ".$GITHUB_RUN_NUMBER" -o artifacts Sources\Microcharts.Maui\Microcharts.Maui.csproj
 
-    - name: Pack Microcharts.Maui
+    - name: Push Microcharts.Maui
       run: |
         dotnet nuget add source --username follesoe --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/follesoe/index.json"
         dotnet nuget push artifacts\*.nupkg --skip-duplicate --no-symbols  --source "github"
