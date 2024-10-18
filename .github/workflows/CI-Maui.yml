@@ -32,10 +32,14 @@ jobs:
         dotnet workload list
 
     - name: Build Microcharts.Maui
-      run: dotnet build --configuration=Release Sources\Microcharts.Maui\Microcharts.Maui.csproj
+      run: |
+        dotnet build --configuration=Release Sources\Microcharts\Microcharts.csproj
+        dotnet build --configuration=Release Sources\Microcharts.Maui\Microcharts.Maui.csproj
 
     - name: Pack Microcharts.Maui
-      run: dotnet pack --configuration=Release -p:VersionPrelease=.${{ github.run_number }} Sources\Microcharts.Maui\Microcharts.Maui.csproj
+      run: |
+        dotnet pack --configuration=Release -p:VersionPrelease=.${{ github.run_number }} Sources\Microcharts\Microcharts.csproj
+        dotnet pack --configuration=Release -p:VersionPrelease=.${{ github.run_number }} Sources\Microcharts.Maui\Microcharts.Maui.csproj
 
     - name: Push Microcharts.Maui
       run: |
