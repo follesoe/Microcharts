@@ -8,8 +8,6 @@
     <Description>Simple, cross-platform chart library for .NET MAUI.</Description>
     <PackageTags>maui dotnet chart skia skiasharp</PackageTags>
     <VersionPrefix>1.1.0</VersionPrefix>
-    <PackageIcon>Icon.png</PackageIcon>
-    <PackageLicenseFile>..\LICENSE</PackageLicenseFile>
     <RepositoryUrl>https://github.com/follesoe/Microcharts.git</RepositoryUrl>
     <PackageProjectUrl>https://github.com/follesoe/Microcharts.git</PackageProjectUrl>
   </PropertyGroup>
@@ -20,8 +18,5 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Microcharts\Microcharts.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\Assets\Icon.png" Pack="true" Visible="false" PackagePath="" />
   </ItemGroup>
 </Project>
