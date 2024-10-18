@@ -35,7 +35,7 @@ jobs:
       run: dotnet build --configuration=Release Sources\Microcharts.Maui\Microcharts.Maui.csproj
 
     - name: Pack Microcharts.Maui
-      run: dotnet pack --configuration=Release -p:VersionPrelease=$GITHUB_RUN_NUMBER Sources\Microcharts.Maui\Microcharts.Maui.csproj
+      run: dotnet pack --configuration=Release --version-suffix ".$GITHUB_RUN_NUMBER" -o artifacts Sources\Microcharts.Maui\Microcharts.Maui.csproj
 
     - name: Push Microcharts.Maui
       run: |
