@@ -7,7 +7,6 @@
     <UseMaui>true</UseMaui>
     <Description>Simple, cross-platform chart library for .NET MAUI.</Description>
     <PackageTags>maui dotnet chart skia skiasharp</PackageTags>
-    <VersionPrefix>1.1.0</VersionPrefix>
     <RepositoryUrl>https://github.com/follesoe/Microcharts.git</RepositoryUrl>
     <PackageProjectUrl>https://github.com/follesoe/Microcharts.git</PackageProjectUrl>
   </PropertyGroup>
