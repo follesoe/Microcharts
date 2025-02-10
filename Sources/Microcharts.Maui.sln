@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microcharts.Samples.Maui", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microcharts.Samples", "Microcharts.Samples\Microcharts.Samples.csproj", "{2141A78D-A0BC-4EEF-BB0D-8AABAD9FCFE4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microcharts.iOS", "Microcharts.iOS\Microcharts.iOS.csproj", "{77AFDC26-5996-4E66-8785-3CC8DBB47DDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microcharts.Samples.iOS", "Microcharts.Samples.iOS\Microcharts.Samples.iOS.csproj", "{E8626BE1-E233-4F4A-9084-673A987B9231}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,14 @@ Global
 		{2141A78D-A0BC-4EEF-BB0D-8AABAD9FCFE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2141A78D-A0BC-4EEF-BB0D-8AABAD9FCFE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2141A78D-A0BC-4EEF-BB0D-8AABAD9FCFE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77AFDC26-5996-4E66-8785-3CC8DBB47DDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77AFDC26-5996-4E66-8785-3CC8DBB47DDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77AFDC26-5996-4E66-8785-3CC8DBB47DDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77AFDC26-5996-4E66-8785-3CC8DBB47DDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8626BE1-E233-4F4A-9084-673A987B9231}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{E8626BE1-E233-4F4A-9084-673A987B9231}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{E8626BE1-E233-4F4A-9084-673A987B9231}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
+		{E8626BE1-E233-4F4A-9084-673A987B9231}.Release|Any CPU.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
