@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microcharts.Maui", "Microch
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microcharts.Samples.Maui", "Microcharts.Samples.Maui\Microcharts.Samples.Maui.csproj", "{0759549D-1389-4897-80BC-86A036DA6CB2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microcharts.Samples", "Microcharts.Samples\Microcharts.Samples.csproj", "{2141A78D-A0BC-4EEF-BB0D-8AABAD9FCFE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{0759549D-1389-4897-80BC-86A036DA6CB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0759549D-1389-4897-80BC-86A036DA6CB2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0759549D-1389-4897-80BC-86A036DA6CB2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2141A78D-A0BC-4EEF-BB0D-8AABAD9FCFE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2141A78D-A0BC-4EEF-BB0D-8AABAD9FCFE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2141A78D-A0BC-4EEF-BB0D-8AABAD9FCFE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2141A78D-A0BC-4EEF-BB0D-8AABAD9FCFE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
