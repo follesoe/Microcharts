@@ -15,7 +15,7 @@ jobs:
         os: [windows-latest, macos-latest]
     steps:
       - name: Clone source
-        uses: actions/checkout@v3.1.0
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -24,11 +24,10 @@ jobs:
         if: matrix.os == 'windows-latest'
 
       - name: Install .NET SDK
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: |
-            6.0.x
-            7.0.x
+            9.0.x
 
       - name: "Install .NET cross-plat and MAUI workloads"
         run: |
@@ -58,9 +57,6 @@ jobs:
 
       - name: "Build and pack Microcharts Android"
         run: msbuild /t:build,pack /p:Configuration=Release Sources/Microcharts.Droid/Microcharts.Droid.csproj
-
-      - name: "Build and pack Microcharts Xamarin.Forms"
-        run: msbuild /t:build,pack /p:Configuration=Release Sources/Microcharts.Forms/Microcharts.Forms.csproj
 
       - name: "Build and pack Microcharts iOS"
         run: msbuild /t:build,pack /p:Configuration=Release Sources/Microcharts.iOS/Microcharts.iOS.csproj
