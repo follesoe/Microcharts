@@ -92,8 +92,8 @@ namespace Microcharts.Samples
         public static Chart[] CreateXamarinLegacySample()
         {
             ChartEntry[] entries = GenerateDefaultXamarinEntries();
-            return new Chart[]
-            {
+            return
+            [
                 new LegacyBarChart
                 {
                     Entries = entries,
@@ -114,16 +114,16 @@ namespace Microcharts.Samples
                     LabelTextSize = 42,
                     PointMode = PointMode.Square,
                     PointSize = 18,
-                },
-            };
+                }
+            ];
         }
 
         public static Chart[] CreateXamarinSample()
         {
             ChartEntry[] entries = GenerateDefaultXamarinEntries();
             Random r = new Random(18);
-            return new Chart[]
-            {
+            return
+            [
                 new BarChart
                 {
                     LabelOrientation = Orientation.Horizontal,
@@ -236,14 +236,14 @@ namespace Microcharts.Samples
                 {
                     Entries = entries,
                     LabelTextSize = 42
-                },
-            };
+                }
+            ];
         }
 
         private static ChartEntry[] GenerateDefaultXamarinEntries()
         {
-            return new[]
-            {
+            return
+            [
                 new ChartEntry(112)
                 {
                     Label = "UWP",
@@ -274,36 +274,25 @@ namespace Microcharts.Samples
                     ValueLabel = "514",
                     Color = SKColor.Parse("#3498db"),
                 }
-            };
+            ];
         }
 
         public static IEnumerable<ExampleChartItem> CreateXamarinExampleChartItem(string chartType)
         {
-            switch (chartType)
+            return chartType switch
             {
-                case nameof(LegacyBarChart):
-                    return GenerateBarChartExample();
-                case nameof(LegacyPointChart):
-                    return GeneratePointChartExample();
-                case nameof(LegacyLineChart):
-                    return GenerateLineChartExample();
-                case nameof(DonutChart):
-                    return GenerateDonutChartExample();
-                case nameof(RadialGaugeChart):
-                    return GenerateRadialGaugeChartExample();
-                case nameof(HalfRadialGaugeChart):
-                    return GenerateHalfRadialGaugeChartExample();
-                case nameof(RadarChart):
-                    return GenerateRadarChartExample();
-                case nameof(BarChart):
-                    return GenerateGroupedBarChartExample();
-                case nameof(PointChart):
-                    return GeneratePointSeriesChartExample();
-                case nameof(LineChart):
-                    return GenerateLineSeriesChartExample();
-                default:
-                    return null;
-            }
+                nameof(LegacyBarChart) => GenerateBarChartExample(),
+                nameof(LegacyPointChart) => GeneratePointChartExample(),
+                nameof(LegacyLineChart) => GenerateLineChartExample(),
+                nameof(DonutChart) => GenerateDonutChartExample(),
+                nameof(RadialGaugeChart) => GenerateRadialGaugeChartExample(),
+                nameof(HalfRadialGaugeChart) => GenerateHalfRadialGaugeChartExample(),
+                nameof(RadarChart) => GenerateRadarChartExample(),
+                nameof(BarChart) => GenerateGroupedBarChartExample(),
+                nameof(PointChart) => GeneratePointSeriesChartExample(),
+                nameof(LineChart) => GenerateLineSeriesChartExample(),
+                _ => null
+            };
         }
 
         private static IEnumerable<ExampleChartItem> GenerateLineChartExample()
@@ -358,8 +347,6 @@ namespace Microcharts.Samples
                     YAxisPosition = Position.Left
                 }
             };
-
-            yield break;
         }
 
         private static IEnumerable<ExampleChartItem> GenerateDonutChartExample()
@@ -403,8 +390,6 @@ namespace Microcharts.Samples
                     LabelMode = LabelMode.RightOnly
                 },
             };
-
-            yield break;
         }
 
         private static IEnumerable<ExampleChartItem> GenerateRadialGaugeChartExample()
@@ -419,8 +404,6 @@ namespace Microcharts.Samples
                     LabelTextSize = 42
                 },
             };
-
-            yield break;
         }
 
         private static IEnumerable<ExampleChartItem> GenerateHalfRadialGaugeChartExample()
@@ -451,13 +434,11 @@ namespace Microcharts.Samples
                     LabelTextSize = 42
                 },
             };
-
-            yield break;
         }
 
         private static IEnumerable<ExampleChartItem> GenerateGroupedBarChartExample()
         {
-            Random r = new Random((int)DateTime.Now.Ticks);
+            var r = new Random((int)DateTime.Now.Ticks);
             yield return new ExampleChartItem()
             {
                 ExampleName = "Default",
@@ -1182,8 +1163,6 @@ namespace Microcharts.Samples
                     }
                 },
             };
-
-            yield break;
         }
 
         private static IEnumerable<ExampleChartItem> GenerateLineSeriesChartExample()
@@ -1494,8 +1473,6 @@ namespace Microcharts.Samples
                     YAxisPosition = Position.Left
                 }
             };
-
-            yield break;
         }
 
         private static IEnumerable<ExampleChartItem> GenerateBarChartExample()
@@ -1542,8 +1519,6 @@ namespace Microcharts.Samples
                     YAxisPosition = Position.Left
                 }
             };
-
-            yield break;
         }
 
         public static IEnumerable<ChartEntry> GenerateTimeSeriesEntry( Random r, int idx, int seconds, bool withNulls = true)
@@ -1693,7 +1668,7 @@ namespace Microcharts.Samples
             }
             else
             {
-                data = new (string label, int value)[0];
+                data = [];
             }
 
             data = data.Take(values).ToArray();
