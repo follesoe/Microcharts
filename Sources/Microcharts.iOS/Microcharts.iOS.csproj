@@ -1,23 +1,23 @@
 <Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-      <TargetFramework>net9.0-ios</TargetFramework>
-      <Nullable>disable</Nullable>
-      <ImplicitUsings>true</ImplicitUsings>
-      <IsTrimmable>true</IsTrimmable>
-      <RootNamespace>Microcharts.iOS</RootNamespace>
-      <AssemblyName>Microcharts.iOS</AssemblyName>
-      <Description>Simple, cross-platform chart library for dotnet iOS.</Description>
-      <PackageTags>maui ios chart skia</PackageTags>
-    </PropertyGroup>
-    <ItemGroup>
-      <PackageReference Include="SkiaSharp.Views" Version="3.116.1" />
-      <PackageReference Include="NuGet.Build.Tasks.Pack">
-        <Version>6.5.0</Version>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-        <PrivateAssets>all</PrivateAssets>
-      </PackageReference>
-    </ItemGroup>
-    <ItemGroup>
-      <ProjectReference Include="../Microcharts/Microcharts.csproj" />
-    </ItemGroup>
+  <PropertyGroup>
+    <TargetFramework>net9.0-ios</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <IsTrimmable>true</IsTrimmable>
+    <RootNamespace>Microcharts.iOS</RootNamespace>
+    <AssemblyName>Microcharts.iOS</AssemblyName>
+    <Description>Simple, cross-platform chart library for dotnet iOS.</Description>
+    <PackageTags>maui ios chart skia</PackageTags>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="SkiaSharp.Views" Version="3.116.1" />
+    <PackageReference Include="NuGet.Build.Tasks.Pack">
+      <Version>6.5.0</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Microcharts/Microcharts.csproj" />
+  </ItemGroup>
 </Project>
