@@ -20,9 +20,9 @@
   <ItemGroup>
     <ProjectReference Include="../Microcharts.iOS/Microcharts.iOS.csproj" />
     <ProjectReference Include="../Microcharts.Samples/Microcharts.Samples.csproj" />
-    <ProjectReference Include="../Microcharts\Microcharts.csproj" />
+    <ProjectReference Include="../Microcharts/Microcharts.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Properties\" />
+    <Folder Include="Properties/" />
   </ItemGroup>
 </Project>
