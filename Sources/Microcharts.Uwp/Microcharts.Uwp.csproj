@@ -119,7 +119,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="SkiaSharp.Views" Version="2.88.3" />
+    <PackageReference Include="SkiaSharp.Views" Version="3.116.1" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
   <ItemGroup>

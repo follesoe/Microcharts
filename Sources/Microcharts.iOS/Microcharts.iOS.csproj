@@ -58,7 +58,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="SkiaSharp.Views" Version="2.88.3" />
+    <PackageReference Include="SkiaSharp.Views" Version="3.116.1" />
     <PackageReference Include="NuGet.Build.Tasks.Pack">
       <Version>6.5.0</Version>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

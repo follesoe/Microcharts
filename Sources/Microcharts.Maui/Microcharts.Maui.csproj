@@ -11,9 +11,9 @@
     <PackageProjectUrl>https://github.com/follesoe/Microcharts.git</PackageProjectUrl>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="SkiaSharp.Views.Maui.Controls" Version="2.88.8" />
     <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
     <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+    <PackageReference Include="SkiaSharp.Views.Maui.Controls" Version="3.116.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Microcharts\Microcharts.csproj" />
