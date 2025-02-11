@@ -2,7 +2,7 @@
   <PropertyGroup>
     <PackageId>Microcharts.Core</PackageId>
     <Description>Core components for Microcharts.</Description>
-    <TargetFrameworks>net9.0;net9.0-ios;net9.0-android</TargetFrameworks>
+    <TargetFrameworks>net9.0;net9.0-ios;net9.0-maccatalyst;net9.0-android</TargetFrameworks>
     <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net9.0-windows10.0.19041.0</TargetFrameworks>
     <OutputType>Library</OutputType>
     <ImplicitUsings>enable</ImplicitUsings>
