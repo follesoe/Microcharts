@@ -2,6 +2,9 @@
 <ContentPage x:Class="Microcharts.Samples.Maui.ChartConfigurationPage"
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Microcharts.Samples.Maui;assembly=Microcharts.Samples.Maui"
+             xmlns:samples="clr-namespace:Microcharts.Samples;assembly=Microcharts.Samples"
+             x:DataType="local:ChartConfigurationPage"
              x:Name="Page">
     <Grid RowDefinitions="Auto, Auto, *">
         <Label Margin="20,0,0,0"
@@ -13,14 +16,13 @@
                FontSize="Subtitle"
                TextColor="Gray"
                Text="Tap on item to see the chart" />
-        <CollectionView Grid.Row="2"
-                        ItemsSource="{Binding Items, Source={x:Reference Page}}">
+        <CollectionView Grid.Row="2" ItemsSource="{Binding Items, Source={x:Reference Page}}">
             <CollectionView.ItemsLayout>
                 <LinearItemsLayout ItemSpacing="10"
                                    Orientation="Vertical" />
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
-                <DataTemplate>
+                <DataTemplate x:DataType="samples:ExampleChartItem">
                     <Grid Margin="0"
                           Padding="0">
                         <Border Margin="10"

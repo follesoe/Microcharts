@@ -3,7 +3,6 @@ namespace Microcharts.Samples.Maui
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ChartPage
     {
-
         public ChartPage(ExampleChartItem chartItem)
         {
             ExampleChartItem = chartItem;
