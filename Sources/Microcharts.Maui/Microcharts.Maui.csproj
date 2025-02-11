@@ -5,6 +5,7 @@
     <OutputType>Library</OutputType>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseMaui>true</UseMaui>
+    <Nullable>disable</Nullable>
     <Description>Simple, cross-platform chart library for .NET MAUI.</Description>
     <PackageTags>maui dotnet chart skia skiasharp</PackageTags>
     <RepositoryUrl>https://github.com/follesoe/Microcharts.git</RepositoryUrl>

@@ -41,7 +41,7 @@
                                        Text="{Binding Name}"
                                        TextColor="Black"
                                        VerticalOptions="Center" />
-                                <Frame Grid.Column="1"
+                                <Border Grid.Column="1"
                                        Margin="5,3"
                                        Padding="10,3"
                                        BackgroundColor="Red"
@@ -50,7 +50,7 @@
                                     <Label FontSize="Small"
                                            Text="SERIES"
                                            TextColor="White" />
-                                </Frame>
+                                </Border>
                                 <microcharts:ChartView x:Name="chartView"
                                                        Grid.Row="1"
                                                        Grid.ColumnSpan="2"

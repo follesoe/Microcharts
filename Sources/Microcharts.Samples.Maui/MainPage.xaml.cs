@@ -1,12 +1,8 @@
-using System;
-using System.Collections.Generic;
 using Microcharts.Samples.Maui.Model;
-using Microsoft.Maui;
-using Microsoft.Maui.Controls;
 
 namespace Microcharts.Samples.Maui
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage
     {
         public MainPage()
         {

@@ -21,14 +21,16 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid Margin="0" Padding="0">
-                        <Frame Margin="10"
+                        <Border Margin="10"
                                Padding="5"
                                BackgroundColor="White"
-                               BorderColor="LightGray"
-                               CornerRadius="10">
-                            <Frame.GestureRecognizers>
+                               Stroke="LightGray">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10" />
+                            </Border.StrokeShape>
+                            <Border.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-                            </Frame.GestureRecognizers>
+                            </Border.GestureRecognizers>
                             <Grid Margin="0"
                                   Padding="0"
                                   ColumnDefinitions="*, Auto"
@@ -38,7 +40,7 @@
                                        Text="{Binding Name}"
                                        TextColor="Black"
                                        VerticalOptions="Center" />
-                                <Frame Grid.Column="1"
+                                <Border Grid.Column="1"
                                        Margin="5,3"
                                        Padding="10,3"
                                        BackgroundColor="Red"
@@ -47,7 +49,7 @@
                                     <Label FontSize="Small"
                                            Text="SERIES"
                                            TextColor="White" />
-                                </Frame>
+                                </Border>
                                 <microcharts:ChartView x:Name="chartView"
                                                        Grid.Row="1"
                                                        Grid.ColumnSpan="2"
@@ -55,7 +57,7 @@
                                                        Chart="{Binding Chart}"
                                                        HeightRequest="250" />
                             </Grid>
-                        </Frame>
+                        </Border>
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
