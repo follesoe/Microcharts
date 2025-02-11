@@ -21,6 +21,7 @@
         <!-- Common NuGet package metadata -->
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <Authors>Microcharts Team</Authors>
+        <Owners>Microcharts Team</Owners>
         <NeutralLanguage>en</NeutralLanguage>
         <RepositoryUrl>https://github.com/microcharts-dotnet/Microcharts.git</RepositoryUrl>
         <PackageProjectUrl>https://github.com/microcharts-dotnet/Microcharts</PackageProjectUrl>

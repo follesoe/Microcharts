@@ -1,4 +1,4 @@
-name: Publish Microcharts NuGet package to GitHub
+name: Publish Microcharts NuGet packages to GitHub
 
 on:
   # Allows you to run this workflow manually from the Actions tab
@@ -32,7 +32,7 @@ jobs:
         dotnet workload install maui
         dotnet workload list
 
-    - name: Build and pack Microcharts
+    - name: Build and pack Microcharts.Core
       run: |
         dotnet pack --configuration=Release -p:VersionPrelease=.${{ github.run_number }} Sources\Microcharts\Microcharts.csproj
 
@@ -47,6 +47,10 @@ jobs:
     - name: Build and pack Microcharts.Droid
       run: |
         dotnet pack --configuration=Release -p:VersionPrelease=.${{ github.run_number }} Sources\Microcharts.Droid\Microcharts.Droid.csproj
+
+    - name: Build and pack Microcharts.Metapackage
+      run: |
+        dotnet pack --configuration=Release -p:VersionPrelease=.${{ github.run_number }} Sources\Microcharts.Metapackage\Microcharts.Metapackage.csproj
 
     - name: Publish packages to GitHub
       run: |
